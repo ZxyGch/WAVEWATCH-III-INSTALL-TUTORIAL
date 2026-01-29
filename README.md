@@ -1,4 +1,4 @@
-If you find this tutorial useful, please give it a star ⭐
+🥳 If you find this tutorial useful, please give me a star ⭐ 🥳
 
 I have another tool developed for WAVEWATCH III users: https://github.com/ZxyGch/WW3Tool
 
