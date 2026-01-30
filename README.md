@@ -27,31 +27,35 @@ sudo make install
 Then perform regression test
 
 ```sh
-cd ../regtests && bin/run_cmake_test ../model mww3_test_01    
+ROOT=$(cd .. && pwd)
+CASE=$ROOT/regtests/ww3_tp1.1
+BIN=$ROOT/build/bin
+WORK=$CASE/work_install_smoke
+
+mkdir -p "$WORK" \
+&& rsync -a --ignore-existing "$CASE/input/" "$WORK/" \
+&& cd "$WORK" \
+&& for exe in ww3_grid ww3_strt ww3_shel; do
+     "$BIN/$exe"
+   done 
 ```
 
 like this,  install WAVEWATCH III success 🎉
 
 ```swift
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060606.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060606.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060607.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060607.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060608.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060608.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060609.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060609.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060610.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060610.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060611.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060611.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060612.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060612.ice
- 
- 
-                    ==================================   
-                  ======>  END OF WAVEWATCH III  <====== 
-                    ================================== 
+  WAVEWATCH III calculating for 1968/06/06 20:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/06 21:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/06 22:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/06 23:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/07 00:00:00 UTC at 14:30:51
+  WAVEWATCH III reached the end of a computation loop at 14:30:51
+
+  Initialization time :      0.08 s
+  Elapsed time        :      0.08 s
+
+  End of program 
+ ====================================
+         WAVEWATCH III Program shell 
 ```
 
 In the  WW3/build/bin, we can find 
@@ -119,31 +123,35 @@ make install
 Then perform regression test
 
 ```sh
-cd ../regtests && bin/run_cmake_test ../model mww3_test_01    
+ROOT=$(cd .. && pwd)
+CASE=$ROOT/regtests/ww3_tp1.1
+BIN=$ROOT/build/bin
+WORK=$CASE/work_install_smoke
+
+mkdir -p "$WORK" \
+&& rsync -a --ignore-existing "$CASE/input/" "$WORK/" \
+&& cd "$WORK" \
+&& for exe in ww3_grid ww3_strt ww3_shel; do
+     "$BIN/$exe"
+   done 
 ```
 
 like this,  install WAVEWATCH III Success 🎉
 
 ```swift
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060606.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060606.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060607.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060607.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060608.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060608.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060609.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060609.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060610.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060610.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060611.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060611.ice
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060612.hs
--rw-r--r--   1 zxy  staff     6498  1 29 11:42 ww3.68060612.ice
- 
- 
-                    ==================================   
-                  ======>  END OF WAVEWATCH III  <====== 
-                    ================================== 
+  WAVEWATCH III calculating for 1968/06/06 20:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/06 21:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/06 22:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/06 23:00:00 UTC at 14:30:51
+  WAVEWATCH III calculating for 1968/06/07 00:00:00 UTC at 14:30:51
+  WAVEWATCH III reached the end of a computation loop at 14:30:51
+
+  Initialization time :      0.08 s
+  Elapsed time        :      0.08 s
+
+  End of program 
+ ====================================
+         WAVEWATCH III Program shell 
 ```
 
 In the  WW3/build/bin, we can find 
